@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const ubuntuBold = localFont({
   src: "./fonts/Ubuntu-Bold.ttf",
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${ubuntuLight.className} ${ubuntuMedium.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
