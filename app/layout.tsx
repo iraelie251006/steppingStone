@@ -1,15 +1,30 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const ubuntuBold = localFont({
+  src: "./fonts/Ubuntu-Bold.ttf",
+  variable: "--font-ubuntu-bold",
+  weight: "700",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const ubuntuLight = localFont({
+  src: "./fonts/Ubuntu-Light.ttf",
+  variable: "--font-ubuntu-light",
+  weight: "300",
+});
+
+const ubuntuMedium = localFont({
+  src: "./fonts/Ubuntu-Medium.ttf",
+  variable: "--font-ubuntu-medium",
+  weight: "500",
+});
+
+const ubuntuRegular = localFont({
+  src: "./fonts/Ubuntu-Regular.ttf",
+  variable: "--font-ubuntu-regular",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ubuntuLight.className} ${ubuntuMedium.variable} antialiased`}
       >
         {children}
       </body>
