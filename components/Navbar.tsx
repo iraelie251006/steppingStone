@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import MobileNavigation from './MobileNavigation'
 
 const Navbar = () => {
   return (
@@ -7,7 +8,7 @@ const Navbar = () => {
         <div>
             <Image src="/SteppingStone logo.png" alt='stepping stone logo' width={300} height={200} />
         </div>
-        <div>Links</div>
+        <MobileNavigation />
     </nav>
   )
 }
