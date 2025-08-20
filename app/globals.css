@@ -110,7 +110,7 @@
     @apply bg-background text-foreground;
   }
   .primary-gradient {
-    background: linear-gradient(129deg, #009245 0%, #FCEE21 100%);
+    background: linear-gradient(129deg, #B8C665 0%, #9ba65a 100%);
   }
   .base-medium {
     @apply text-[18px] font-medium leading-[25.2px];
