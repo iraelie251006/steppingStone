@@ -1,5 +1,7 @@
+import About from "@/components/About";
 import Hero from "@/components/Hero";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+
 
 export const metadata: Metadata = {
   title: "Stepping Stone Ltd | Home",
@@ -10,6 +12,7 @@ export default function Home() {
   return (
     <section>
       <Hero />
+      <About />
     </section>
   );
 }
