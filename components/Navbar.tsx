@@ -12,7 +12,7 @@ const Navbar = () => {
         </div>
         <div className='flex items-center max-sm:hidden'>
           {sidebarLinks.map(({label, route}) => (
-            <Link href={route} key={label} className='font-semibold px-4'>
+            <Link href={route} key={label} className='font-bold text-[18px] px-4'>
               {label}
             </Link>
           ))}
