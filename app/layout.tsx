@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     siteName: "Stepping Stone Ltd",
     images: [
       {
-        url: "/StepStone.jpeg",
+        url: "https://stepping-stone-three.vercel.app/StepStone.jpeg",
         width: 1200,
         height: 630,
         alt: "Stepping Stone Ltd Logo",
