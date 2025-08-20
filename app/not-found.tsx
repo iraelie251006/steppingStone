@@ -1,4 +1,3 @@
-// app/not-found.tsx
 "use client";
 
 import Link from "next/link";
@@ -7,7 +6,7 @@ import Image from "next/image";
 import { MapPin } from "lucide-react";
 
 export default function NotFound() {
-    const destination = "43JM+9Q, Kigali"; // <-- replace with your location or coordinates
+    const destination = "43JM+9Q, Kigali";
     const appUrl = `comgooglemaps://?saddr=Current+Location&daddr=${encodeURIComponent(
         destination
       )}`;
@@ -28,12 +27,12 @@ export default function NotFound() {
       <Image src="/image.png" width={200} height={200} alt="lost"/>
       <h1 className="text-3xl font-bold">404 - Page Not Found</h1>
       <p className="text-gray-500 max-w-md">
-        Oops! The page is lost, but not all wonders are.
+        Oops! The page is lost, but not all wonders are lost.
       </p>
       <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
-        <Button className="mt-4 flex items-center space-x-2" onClick={handleClick}>
-            <MapPin className="w-5 h-5" />
-            <span>Find Us</span>
+        <Button className="mt-4 flex items-center space-x-2 primary-gradient" onClick={handleClick}>
+            <MapPin className="w-5 h-5 text-slate-700" />
+            <span className="font-extrabold text-slate-700">Find Us</span>
         </Button>
       </Link>
     </div>
