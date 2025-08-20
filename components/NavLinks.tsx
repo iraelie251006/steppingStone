@@ -9,7 +9,7 @@ import { SheetClose } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { sidebarLinks } from "@/lib/navLinks";
 
-const NavLinks = ({ isMobileNav = false, userId}: { isMobileNav?: boolean, userId?: string }) => {
+const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
   const pathname = usePathname();
   return (
     <>
@@ -18,18 +18,14 @@ const NavLinks = ({ isMobileNav = false, userId}: { isMobileNav?: boolean, userI
           (pathname.includes(item.route) && item.route.length > 1) ||
           pathname === item.route;
 
-        if (item.route === "/profile") {
-          if (userId) item.route = `${item.route}/${userId}`;
-        }
-
         const LinkComponent = (
           <Link
             href={item.route}
             key={item.label}
             className={cn(
               isActive
-                ? "primary-gradient rounded-lg text-light-900"
-                : "text-dark300_light800",
+                ? "primary-gradient rounded-lg text-white"
+                : "text-slate-900",
               "flex items-center justify-start p-3 gap-4"
             )}
           >
@@ -38,11 +34,11 @@ const NavLinks = ({ isMobileNav = false, userId}: { isMobileNav?: boolean, userI
               width={20}
               height={20}
               alt={item.label}
-              className={cn({ "invert-colors": !isActive })}
+              className={cn({ "invert fill-white": !isActive })}
             />
             <p
               className={cn(
-                isActive ? "base-bold" : "base-medium",
+                isActive ? "base-bold" : "base-semibold",
                 !isMobileNav && "max-lg:hidden"
               )}
             >

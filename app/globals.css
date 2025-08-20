@@ -109,4 +109,18 @@
   body {
     @apply bg-background text-foreground;
   }
+  .primary-gradient {
+    background: linear-gradient(129deg, #009245 0%, #FCEE21 100%);
+  }
+  .base-medium {
+    @apply text-[18px] font-medium leading-[25.2px];
+  }
+
+  .base-semibold {
+    @apply text-[18px] font-semibold leading-[25.2px];
+  }
+
+  .base-bold {
+    @apply text-[18px] font-bold leading-[140%];
+  }
 }
