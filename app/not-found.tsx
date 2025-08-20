@@ -4,8 +4,25 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { MapPin } from "lucide-react";
 
 export default function NotFound() {
+    const destination = "43JM+9Q, Kigali"; // <-- replace with your location or coordinates
+    const appUrl = `comgooglemaps://?saddr=Current+Location&daddr=${encodeURIComponent(
+        destination
+      )}`;
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=Current+Location&destination=${encodeURIComponent(
+    destination
+  )}`;
+  const handleClick = () => {
+    // Try to open Google Maps app first
+    window.location.href = appUrl;
+
+    // Fallback to web after short delay (if app not installed)
+    setTimeout(() => {
+      window.open(googleMapsUrl, "_blank");
+    }, 500);
+  };
   return (
     <div className="flex flex-col items-center justify-center h-96 mt-20 text-center space-y-6">
       <Image src="/image.png" width={200} height={200} alt="lost"/>
@@ -13,8 +30,11 @@ export default function NotFound() {
       <p className="text-gray-500 max-w-md">
         Oops! The page is lost, but not all wonders are.
       </p>
-      <Link href="/">
-        <Button className="mt-4">Go Back Home</Button>
+      <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
+        <Button className="mt-4 flex items-center space-x-2" onClick={handleClick}>
+            <MapPin className="w-5 h-5" />
+            <span>Find Us</span>
+        </Button>
       </Link>
     </div>
   );
