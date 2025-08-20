@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "sustainable packaging Rwanda", 
     "Kigali packaging company"
   ],
-  metadataBase: new URL("https://steppingstoneltd.rw"),
+  metadataBase: new URL("https://steppingstoneltd.com"),
   authors: [
     {
       name: "Stepping Stone Ltd",
@@ -58,11 +58,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Stepping Stone Ltd",
     description: "Stepping Stone Ltd is your trusted partner for sustainable packaging solutions in Rwanda. We manufacture high-quality boxes and packaging materials tailored to your business needs.",
-    url: "https://steppingstoneltd.rw",
+    url: "https://steppingstoneltd.com",
     siteName: "Stepping Stone Ltd",
     images: [
       {
-        url: "/Stepping Stone logo.ai",
+        url: "/StepStone.jpeg",
         width: 1200,
         height: 630,
         alt: "Stepping Stone Ltd Logo",
